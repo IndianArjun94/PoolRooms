@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "poolroomsmod:kaupen_poi",
+      "required": false
+    }
+  ]
+}

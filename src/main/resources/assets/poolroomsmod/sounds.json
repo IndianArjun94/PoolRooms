@@ -1,0 +1,46 @@
+{
+  "chisel_use": {
+    "subtitle": "sounds.poolroomsmod.chisel_use",
+    "sounds": [
+      "poolroomsmod:chisel_use"
+    ]
+  },
+  "magic_block_break": {
+    "subtitle": "sounds.poolroomsmod.magic_block_break",
+    "sounds": [
+      "poolroomsmod:magic_block_break"
+    ]
+  },
+  "magic_block_step": {
+    "subtitle": "sounds.poolroomsmod.magic_block_step",
+    "sounds": [
+      "poolroomsmod:magic_block_step"
+    ]
+  },
+  "magic_block_place": {
+    "subtitle": "sounds.poolroomsmod.magic_block_place",
+    "sounds": [
+      "poolroomsmod:magic_block_place"
+    ]
+  },
+  "magic_block_hit": {
+    "subtitle": "sounds.poolroomsmod.magic_block_hit",
+    "sounds": [
+      "poolroomsmod:magic_block_hit"
+    ]
+  },
+  "magic_block_fall": {
+    "subtitle": "sounds.poolroomsmod.magic_block_fall",
+    "sounds": [
+      "poolroomsmod:magic_block_fall"
+    ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "poolroomsmod:bar_brawl",
+        "stream": true
+      }
+    ]
+  }
+}

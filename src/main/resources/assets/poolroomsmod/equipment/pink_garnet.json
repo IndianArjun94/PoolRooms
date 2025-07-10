@@ -1,0 +1,24 @@
+{
+  "layers": {
+    "wolf_body": [
+      {
+        "texture": "poolroomsmod:pink_garnet"
+      }
+    ],
+    "horse_body": [
+      {
+        "texture": "poolroomsmod:pink_garnet"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "poolroomsmod:pink_garnet"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "poolroomsmod:pink_garnet"
+      }
+    ]
+  }
+}
