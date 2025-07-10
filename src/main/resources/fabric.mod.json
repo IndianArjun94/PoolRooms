@@ -1,35 +1,35 @@
 {
 	"schemaVersion": 1,
-	"id": "tutorialmod",
+	"id": "poolroomsmod",
 	"version": "${version}",
-	"name": "Tutorial Mod",
-	"description": "Tutorial Mod by Kaupenjoe for YouTube",
+	"name": "Pool Rooms",
+	"description": "Pool Rooms in Minecraft, figure out the rest yourself.",
 	"authors": [
-		"Kaupenjoe!"
+		"Arjun, Kaupenjoe for tutorial on YT!"
 	],
 	"contact": {
-		"homepage": "https://kaupenjoe.net",
-		"sources": "https://github.com/Tutorials-By-Kaupenjoe/Fabric-Tutorial-1.21.X"
+		"homepage": "N/A",
+		"sources": "N/A"
 	},
 	"license": "MIT",
-	"icon": "assets/tutorialmod/icon.png",
+	"icon": "assets/poolroomsmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.kaupenjoe.tutorialmod.TutorialMod"
+			"net.arjun.poolroomsmod.PoolRoomsMod"
 		],
 		"fabric-datagen": [
-			"net.kaupenjoe.tutorialmod.TutorialModDataGenerator"
+			"net.arjun.poolroomsmod.PoolRoomsModDataGenerator"
 		],
 		"client": [
-			"net.kaupenjoe.tutorialmod.TutorialModClient"
+			"net.arjun.poolroomsmod.PoolRoomsModClient"
 		],
 		"rei_client": [
-			"net.kaupenjoe.tutorialmod.compat.TutorialModREIClient"
+			"net.arjun.poolroomsmod.compat.PoolRoomsModREIClient"
 		]
 	},
 	"mixins": [
-		"tutorialmod.mixins.json"
+		"poolroomsmod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
