@@ -1,8 +1,0 @@
-{
-  "type": "poolroomsmod:growth_chamber",
-  "ingredient": "poolroomsmod:raw_pink_garnet",
-  "result": {
-    "count": 16,
-    "id": "poolroomsmod:pink_garnet"
-  }
-}

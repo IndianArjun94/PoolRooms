@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version "${loom_version}"
+	id 'fabric-loom' version '1.10-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -16,10 +16,11 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven { url "https://maven.shedaniel.me" }
 }
 
 fabricApi {
-	configureDataGeneration {
+	configureDataGeneration() {
 		client = true
 	}
 }
@@ -32,14 +33,20 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+
+	// modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:17.0.803"
+	// modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:17.0.803"
+//
+	// modApi "dev.architectury:architectury-fabric:14.0.4"
+	// modApi "me.shedaniel.cloth:cloth-config-fabric:16.0.143"
+
 }
 
 processResources {
 	inputs.property "version", project.version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": inputs.properties.version
+		expand "version": project.version
 	}
 }
 
@@ -58,10 +65,8 @@ java {
 }
 
 jar {
-	inputs.property "archivesName", project.base.archivesName
-
 	from("LICENSE") {
-		rename { "${it}_${inputs.properties.archivesName}"}
+		rename { "${it}_${project.base.archivesName.get()}"}
 	}
 }
 

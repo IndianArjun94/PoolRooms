@@ -23,8 +23,6 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.storage.ReadView;
-import net.minecraft.storage.WriteView;
 import net.minecraft.text.Text;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
@@ -99,19 +97,19 @@ public class GrowthChamberBlockEntity extends BlockEntity implements ExtendedScr
     }
 
     @Override
-    protected void writeData(WriteView view) {
-        super.writeData(view);
-        Inventories.writeData(view, inventory);
-        view.putInt("growth_chamber.progress", progress);
-        view.putInt("growth_chamber.max_progress", maxProgress);
+    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+        super.writeNbt(nbt, registryLookup);
+        Inventories.writeNbt(nbt, inventory, registryLookup);
+        nbt.putInt("growth_chamber.progress", progress);
+        nbt.putInt("growth_chamber.max_progress", maxProgress);
     }
 
     @Override
-    protected void readData(ReadView view) {
-        Inventories.readData(view, inventory);
-        progress = view.getInt("growth_chamber.progress", 0);
-        maxProgress = view.getInt("growth_chamber.max_progress", 0);
-        super.readData(view);
+    protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+        Inventories.readNbt(nbt, inventory, registryLookup);
+        progress = nbt.getInt("growth_chamber.progress").get();
+        maxProgress = nbt.getInt("growth_chamber.max_progress").get();
+        super.readNbt(nbt, registryLookup);
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {

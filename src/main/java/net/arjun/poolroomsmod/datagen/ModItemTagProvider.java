@@ -18,43 +18,43 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        valueLookupBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
+        getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
                 .add(ModItems.PINK_GARNET)
                 .add(ModItems.RAW_PINK_GARNET)
                 .add(Items.COAL)
                 .add(Items.STICK)
                 .add(Items.APPLE);
 
-        valueLookupBuilder(ModTags.Items.PINK_GARNET_REPAIR)
+        getOrCreateTagBuilder(ModTags.Items.PINK_GARNET_REPAIR)
                 .add(ModItems.PINK_GARNET);
 
-        valueLookupBuilder(ItemTags.SWORDS)
+        getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.PINK_GARNET_SWORD);
-        valueLookupBuilder(ItemTags.PICKAXES)
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.PINK_GARNET_PICKAXE);
-        valueLookupBuilder(ItemTags.SHOVELS)
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(ModItems.PINK_GARNET_SHOVEL);
-        valueLookupBuilder(ItemTags.AXES)
+        getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.PINK_GARNET_AXE);
-        valueLookupBuilder(ItemTags.HOES)
+        getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.PINK_GARNET_HOE);
 
-        valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.PINK_GARNET_HELMET)
                 .add(ModItems.PINK_GARNET_CHESTPLATE)
                 .add(ModItems.PINK_GARNET_LEGGINGS)
                 .add(ModItems.PINK_GARNET_BOOTS);
 
-        valueLookupBuilder(ItemTags.TRIM_MATERIALS)
+        getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.PINK_GARNET);
 
-        valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.DRIFTWOOD_LOG.asItem())
                 .add(ModBlocks.DRIFTWOOD_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_DRIFTWOOD_LOG.asItem())
                 .add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.asItem());
 
-        valueLookupBuilder(ItemTags.PLANKS)
+        getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.DRIFTWOOD_PLANKS.asItem());
     }
 }

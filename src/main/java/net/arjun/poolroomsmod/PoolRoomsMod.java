@@ -42,7 +42,7 @@ import org.slf4j.LoggerFactory;
 
 // Very important comment
 public class PoolRoomsMod implements ModInitializer {
-	public static final String MOD_ID = "poolroomsmod";
+	public static final String MOD_ID = "pool-rooms-mod";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
